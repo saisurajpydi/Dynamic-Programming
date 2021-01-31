@@ -9,19 +9,21 @@ wt[] =  [1 , 3 , 4 , 5]
 val[] = [1 , 4 , 5 , 7]
 W = 7
 """
-# Recursion
-
-def knapsack(wt,val,W,n):
-    if( n == 0 or W == 0):
-        return 0
-    if(wt[n-1] <= W):
-        return max(val[n-1] + knapsack(wt,val,W-wt[n-1],n-1),knapsack(wt,val,W,n-1))
-    else:
-        return knapsack(wt,val,W,n-1)
-        
 wt =  [10,20,30]            #[1,3,4,5]
 val = [60,100,120] #[1,4,5,7]
 n = len(wt)
 W = 50
+row = n + 1
+col = W + 1
+dp = [[0] * col]*row
+def knapsack(wt,val,W,n):
+    for i in range(row):
+        for j in range(col):
+            if( i == 0 or j == 0):
+                dp[i][j] = 0
+            elif( wt[i-1] <= j):
+                dp[i][j] = max(val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j])
+            else:
+                dp[i][j] = dp[i-1][j]
+    return dp[n][W]
 print(knapsack(wt,val,W,n))
-
