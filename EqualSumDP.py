@@ -33,9 +33,11 @@ def equalSum(arr, sum , n):
         dp[i][0] = True
     for i in range(1,row):
         for j in range(1,col):
-            if( arr[i - 1] <= sum):
+            if( arr[i - 1] <= j):
                 dp[i][j] = dp[i-1][j-arr[i - 1]] or dp[i-1][j]
             else:
                 dp[i][j] = dp[i-1][j]
     return dp[n][sum]
+
+    
 print(equalSum(arr,sum,n))
