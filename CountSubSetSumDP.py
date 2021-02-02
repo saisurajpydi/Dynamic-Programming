@@ -14,7 +14,7 @@ Input: arr[] = {1, 1, 1, 1}, X = 1
 Output: 4
 """
 arr = [1, 1, 1, 1]
-sum = 1
+sum = 20
 n = len(arr)
 row = n + 1
 col = sum + 1
