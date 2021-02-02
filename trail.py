@@ -1,3 +1,4 @@
+"""
 a = list(map(int,input().split()))
 n = a[0] 
 W = a[1]
@@ -8,3 +9,7 @@ dp = [[0] * col]*row
 p=[[0 for x in range(col)] for x in range(row)]
 print(dp)
 print(p)
+"""
+n = 8
+r = [i for i in range(1,n+1)]
+print(r)
