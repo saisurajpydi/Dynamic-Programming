@@ -10,6 +10,11 @@ p=[[0 for x in range(col)] for x in range(row)]
 print(dp)
 print(p)
 """
+"""
 n = 8
 r = [i for i in range(1,n+1)]
 print(r)
+"""
+t1 = "ylqpejqbalahwr" 
+print([[] * 15] * 11)
+print([[0 for i in range(15)] for i in range(15)])
