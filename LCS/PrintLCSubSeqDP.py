@@ -1,3 +1,12 @@
+"""
+Printing Longest Common Subsequence
+
+Given two sequences, print the longest subsequence present in both of them.
+Examples:
+LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+"""
+
 def longestCommonSubsequence(a, b):
     n1 = len(a)
     n2 = len(b)
@@ -6,8 +15,8 @@ def longestCommonSubsequence(a, b):
     dp = [[0 for i in range(col)] for i in range(row)]
     if( n1 == 0 or n2 == 0):
         return 0
-    for i in range(row):
-        for j in range(col):
+    for i in range(1,row):
+        for j in range(1,col):
             if( a[i-1] == b[j-1]):
                 dp[i][j] = 1 + dp[i-1][j-1]
             else:
