@@ -43,16 +43,14 @@ class Solution:
                     result += str1[i-1]
                     i -= 1
                 else:
-                    str2[j-1]
+                    result += str2[j-1]
                     j -= 1
-        """
         while( i > 0):
             result += str1[i-1]
             i -= 1
         while( j > 0):
             result += str2[j-1]
             j -= 1
-        """    
         return result[::-1]
 
 
