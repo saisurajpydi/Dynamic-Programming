@@ -23,8 +23,10 @@ a = Queue()
 q.put(3)
 q.put("a")
 q.put(1)
+
 print(q.full(), "the queue is full")
 for i in range(q.qsize()):
     print(q.get(i),"is the",i,"th element in the queue")
 print(q.qsize())
 print(a.qsize())
+

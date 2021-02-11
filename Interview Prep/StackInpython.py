@@ -30,3 +30,4 @@ print("to check whether empty or not :",stack.empty())
 print("the elements in the stack are LIFO :", end = " ")
 for i in range(stack.qsize()):
     print(stack.get(i), end = " ")
+h
