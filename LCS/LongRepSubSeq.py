@@ -37,4 +37,4 @@ class Solution:
 if __name__ == "__main__":
     so = Solution()
     str1 = "aabebcdd"
-    print("the longest subsequnce length is :",so.lrs(str1))
+    print("the longest subsequnce length is : ",so.lrs(str1))
